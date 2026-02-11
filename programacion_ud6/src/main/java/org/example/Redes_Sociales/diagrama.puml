@@ -1,0 +1,40 @@
+@startuml
+package "org.example.Redes_Sociales" {
+
+    class Usuario {
+        - nombre : String
+        - edad : int
+        - nombreUsuario : String
+        - seguidores : int
+        --
+        + Usuario(nombre:String, edad:int, nombreUsuario:String, seguidores:int)
+
+    }
+
+    class Streamer {
+        - numero_retransmisiones : int
+        - horas_directo : int
+        --
+        + Streamer(nombre:String, edad:int, nombreUsuario:String, seguidores:int, numero_retransmisiones:int, horas_directo:int)
+
+    }
+
+    class Influencer {
+        - listaColaboraciones : ArrayList<String>
+        --
+        + Influencer(nombre:String, edad:int, nombreUsuario:String, seguidores:int)
+        + anyadirColab(colaboracion:String) : void
+        + borrarColab(colaboracion:String) : void
+
+    }
+
+    class Basico {
+        + Basico(nombre:String, edad:int, nombreUsuario:String, seguidores:int)
+    }
+
+    Usuario <|-- Streamer
+    Usuario <|-- Influencer
+    Usuario <|-- Basico
+}
+
+@enduml

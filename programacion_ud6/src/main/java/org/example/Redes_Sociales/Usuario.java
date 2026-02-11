@@ -47,7 +47,7 @@ public class Usuario {
     }
 
     public void mostrarInfo(){
-        System.out.println("Información del Usuario");
+        System.out.println("\nInformación del Usuario");
         System.out.println("Nombre: "+nombre);
         System.out.println("Edad: "+edad);
         System.out.println("Nombre de usuario: @"+nombreUsuario);

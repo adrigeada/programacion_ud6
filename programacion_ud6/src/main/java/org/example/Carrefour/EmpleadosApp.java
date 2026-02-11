@@ -1,5 +1,7 @@
 package org.example.Carrefour;
 
+import java.util.ArrayList;
+
 public class EmpleadosApp {
     static void main() {
 
@@ -12,6 +14,26 @@ public class EmpleadosApp {
         adri.anyadirArma("esposas");
 
         adri.mostrarInfo();
+
+        Persona manuel = new Cajero(1234,"Manuel",2000);
+
+        ArrayList<Persona> listaEmpleados = new ArrayList<>();
+
+        listaEmpleados.add(manuel);
+        listaEmpleados.add(adri);
+
+        for (Persona persona : listaEmpleados){
+
+        }
+
+        fichar(manuel);
+        fichar(adri);
+
+    }
+
+    public static void fichar(Persona persona){
+
+        System.out.println("Fichando...");
 
 
     }

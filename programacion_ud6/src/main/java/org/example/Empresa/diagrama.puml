@@ -1,0 +1,29 @@
+@startuml
+package "org.example.Empresa" {
+
+    class Empleado {
+        +Empleado()
+        +realizarTarea() : void
+    }
+
+    class Desarrollador {
+        +Desarrollador()
+        +realizarTarea() : void
+    }
+
+    class Disenyador {
+        +Disenyador()
+        +realizarTarea() : void
+    }
+
+    class Gerente {
+        +Gerente()
+        +realizarTarea() : void
+    }
+
+    Empleado <|-- Desarrollador
+    Empleado <|-- Disenyador
+    Empleado <|-- Gerente
+}
+
+@enduml
