@@ -8,6 +8,7 @@ public class EmpleadosApp {
 
         Cajero jorge = new Cajero(147,"Jorge",1800);
         Seguridad adri = new Seguridad(123,"Adrian",1500,"Prosegur");
+        Reponedor carlos = new Reponedor(254,"carlos",1300,5);
 
         jorge.mostrarInfo();
         adri.anyadirArma("porra");
@@ -28,6 +29,10 @@ public class EmpleadosApp {
 
         fichar(manuel);
         fichar(adri);
+
+        jorge.trabajar();
+        adri.trabajar();
+        carlos.trabajar();
 
     }
 

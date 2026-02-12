@@ -1,6 +1,6 @@
 package org.example.Carrefour;
 
-public class Persona {
+public abstract class Persona {
 
     private int codigo;
     private String nombre;
@@ -41,6 +41,9 @@ public class Persona {
         System.out.println("\nPersona con código " +codigo+" y nombre "+nombre+", gana "+ sueldo+" euros.");
 
     }
+
+    public abstract void trabajar(); //lo que hace este metodo, lo dicen las hijas
+
 
     @Override
     public String toString() {

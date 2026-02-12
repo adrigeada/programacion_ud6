@@ -43,6 +43,11 @@ public class Seguridad extends Persona {
     }
 
     @Override
+    public void trabajar() {
+        System.out.println("Vigilando sospechosos...");
+    }
+
+    @Override
     public String toString() {
         return "Seguridad{" +
                 "empresa='" + empresa + '\'' +
