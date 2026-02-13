@@ -1,0 +1,50 @@
+@startuml
+skinparam classAttributeIconSize 0
+package org.example.ECommerce {
+
+    abstract class MetodoPago {
+        +procesarPago(importe: double) : void
+    }
+
+    class TarjetaCredito {
+        -LONGITUD_NRO_TARJETA : int
+        -tiposValidos : String[]
+        -nro_tarjeta : String
+        -tipo : String
+        +TarjetaCredito(nro_tarjeta: String, tipo: String)
+        +validarTarjeta() : boolean
+        +procesarPago(importe: double) : void
+
+    }
+
+    class Paypal {
+        -FORMATO_CUENTA : String
+        -cuenta : String
+        -saldo : double
+        +Paypal(cuenta: String)
+        +validarPayPal() : boolean
+        +validarSaldo(importe: double) : boolean
+        +procesarPago(importe: double) : void
+    }
+
+    class Bizum {
+        -LONGITUD_TELF : int
+        -telefono : String
+        -pin : int
+        +Bizum(telefono: String)
+        +validarBizum() : boolean
+        +procesarPago(importe: double) : void
+    }
+
+    class Tienda {
+        {static}realizarPago(pago: MetodoPago) : double
+        {static}iniciarPago() : void
+    }
+
+    MetodoPago <|-- TarjetaCredito
+    MetodoPago <|-- Paypal
+    MetodoPago <|-- Bizum
+    Tienda --> MetodoPago
+}
+
+@enduml
