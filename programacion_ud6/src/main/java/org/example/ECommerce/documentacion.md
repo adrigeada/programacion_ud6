@@ -7,9 +7,8 @@
     - [Código de PlantUML](#c%C3%B3digo-de-plantuml)
     - [Contenido de las clases .java](#contenido-de-las-clases-java)
 3. [Programa principal (app)](#3-programa-principal-app)
-4. [JavaDocs](#4-JavaDocs)
-5. [Pruebas](#5-pruebas)
-6. [Entrega](#5-entrega)
+4. [Pruebas](#4-pruebas)
+5. [Entrega](#5-entrega)
 
 ### 1. Intro
   > En esta práctica creamos una app para un sistema de pagos online. Al entrar en la tienda se nos pregunta que método de pago queremos usar entre 3 opciones. Bizum, Paypal y Tarjeta de crédito. Dependiendo de lo que elijamos pasaremos a validar el método de pago.
@@ -449,13 +448,11 @@ public class App {
 ````
 [Link a la clase en github](https://github.com/adrigeada/programacion_ud6/blob/main/programacion_ud6/src/main/java/org/example/ECommerce/App.java)
 
-### 4. JavaDocs
-[Index Javadocs](javadocs/index.html)
-
-### 5. Pruebas
+### 4. Pruebas
 
 
-### 6. Entrega
+
+### 5. Entrega
 
 - [X] Código fuente en GitHub
 - [X] Documentación
