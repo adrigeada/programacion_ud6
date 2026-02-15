@@ -449,25 +449,25 @@ public class App {
 [Link a la clase en github](https://github.com/adrigeada/programacion_ud6/blob/main/programacion_ud6/src/main/java/org/example/ECommerce/App.java)
 
 ### 4. Pruebas
-> Prueba de elegir un método de pago no válido
+- Prueba de elegir un método de pago no válido<br>
 ![](img/noMetodoPago.png)<br><br>
-> Prueba Bizum con datos correctos
+- Prueba Bizum con datos correctos<br>
 ![](img/bizum_bien.png)<br><br>
-> Prueba Bizum con número de teléfono diferente a 9 carácteres
+- Prueba Bizum con número de teléfono diferente a 9 carácteres<br>
 ![](img/bizum_telfMal.png)<br><br>
-> Prueba Bizum con PIN incorrecto
+- Prueba Bizum con PIN incorrecto<br>
 ![](img/bizum_pinMal.png)<br><br>
-> Prueba Paypal con datos correctos
+- Prueba Paypal con datos correctos<br>
 ![](img/paypalBien.png)<br><br>
-> Prueba Paypal con el formato de la cuenta no válido
+- Prueba Paypal con el formato de la cuenta no válido<br>
 ![](img/paypalCuentaMal.png)<br><br>
-> Prueba Paypal teniendo un saldo menor al importe
+- Prueba Paypal teniendo un saldo menor al importe<br>
 ![](img/paypalSaldoMal.png)<br><br>
-> Prueba Tarjeta de crédito con datos correctos
+- Prueba Tarjeta de crédito con datos correctos<br>
 ![](img/tarjetaBien.png)<br><br>
-> Prueba Tarjeta de crédito con un número de tarjeta diferente a 16 carácteres
+- Prueba Tarjeta de crédito con un número de tarjeta diferente a 16 carácteres<br>
 ![](img/tarjetaNumMal.png)<br><br>
-> Prueba Tarjeta de crédito con un tipo de tarjeta no válido
+- Prueba Tarjeta de crédito con un tipo de tarjeta no válido<br>
 ![](img/tarjetaTipoMal.png)<br><br>
 
 
