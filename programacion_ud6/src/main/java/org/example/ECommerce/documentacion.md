@@ -7,7 +7,8 @@
     - [Código de PlantUML](#c%C3%B3digo-de-plantuml)
     - [Contenido de las clases .java](#contenido-de-las-clases-java)
 3. [Programa principal (app)](#3-programa-principal-app)
-4. [Pruebas](#4-pruebas)
+4. [JavaDocs](#4-JavaDocs)
+5. [Pruebas](#5-pruebas)
 6. [Entrega](#5-entrega)
 
 ### 1. Intro
@@ -448,10 +449,13 @@ public class App {
 ````
 [Link a la clase en github](https://github.com/adrigeada/programacion_ud6/blob/main/programacion_ud6/src/main/java/org/example/ECommerce/App.java)
 
-### 4. Pruebas
+### 4. JavaDocs
+[Index Javadocs](javadocs/index.html)
+
+### 5. Pruebas
 
 
-### 5. Entrega
+### 6. Entrega
 
 - [X] Código fuente en GitHub
 - [X] Documentación
