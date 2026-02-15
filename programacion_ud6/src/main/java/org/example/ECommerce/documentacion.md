@@ -22,6 +22,7 @@
 #### Diagrama de clases UML
 ![](img/diagrama.png)
 
+
 #### Código de PlantUML
 
 ````
@@ -34,31 +35,24 @@ package org.example.ECommerce {
     }
 
     class TarjetaCredito {
-        -LONGITUD_NRO_TARJETA : int
-        -tiposValidos : String[]
         -nro_tarjeta : String
         -tipo : String
-        +TarjetaCredito(nro_tarjeta: String, tipo: String)
         +validarTarjeta() : boolean
         +procesarPago(importe: double) : void
 
     }
 
     class Paypal {
-        -FORMATO_CUENTA : String
         -cuenta : String
         -saldo : double
-        +Paypal(cuenta: String)
         +validarPayPal() : boolean
         +validarSaldo(importe: double) : boolean
         +procesarPago(importe: double) : void
     }
 
     class Bizum {
-        -LONGITUD_TELF : int
         -telefono : String
         -pin : int
-        +Bizum(telefono: String)
         +validarBizum() : boolean
         +procesarPago(importe: double) : void
     }
