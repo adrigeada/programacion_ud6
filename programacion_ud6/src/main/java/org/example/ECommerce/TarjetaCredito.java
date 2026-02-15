@@ -15,7 +15,7 @@ public class TarjetaCredito extends MetodoPago{
     }
 
     /**
-     * Comprueba que el nro de tarjeta tenga la longitud adecuada (16 caracteres) y que el tipo sea válido, puede ser VISA, MASTERCAR, MAESTRO. En el metodo Tienda.iniciar pago, lo que se escriba se pasa a mayúsculas, para que coincida con los tipos.
+     * Comprueba que el nro de tarjeta tenga la longitud adecuada (16 caracteres) y que el tipo sea válido, puede ser VISA, MASTERCARD, MAESTRO. En el metodo Tienda.iniciar pago, lo que se escriba se pasa a mayúsculas, para que coincida con los tipos.
      * @return true si la longitud y tipo válido. False si uno de los dos no es válido.
      */
     public boolean validarTarjeta(){

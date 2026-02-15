@@ -11,6 +11,10 @@ public class Paypal extends MetodoPago{
         this.saldo = 23;
     }
 
+    /**
+     * Este método comprueba que la cuenta pasada con el constructor tenga el formato aceptado que hemos declarado con la constante FORMATO_CUENTA.
+     * @return true si el formato coincide. False si no coincide.
+     */
     public boolean validarPayPal(){
 
         if (cuenta.matches(FORMATO_CUENTA)){
@@ -22,6 +26,10 @@ public class Paypal extends MetodoPago{
         }
     }
 
+    /**
+     * @param importe es la cantidad de dinero con la que vamos a comparar el saldo.
+     * @return true si el importe es menor o igual al saldo (puede pagar). False si el importe es mayor (no tiene suficiente saldo).
+     */
     public boolean validarSaldo(double importe){
         if (importe<=saldo){
             System.out.println("Saldo suficiente. Procesando pago de "+importe+"€. Nuevo saldo: "+(saldo-importe)+"€.");

@@ -16,6 +16,11 @@ public class Bizum extends MetodoPago{
         pin = setPin();
     }
 
+    /**
+     *Este método va a validar que el pin sea el mismo que se ha generado automáticamente y que el teléfono tenga 9 carácteres.
+     * El teléfono es el que se ha dado en el constructor. El pin lo recibe por teclado.
+     * @return true si las dos condiciones se cumplen. False si una de las dos no se cumple.
+     */
     public boolean validarBizum(){
         System.out.println("Escribe el pin de Bizum");
         int pin = teclado.nextInt();
@@ -51,6 +56,12 @@ public class Bizum extends MetodoPago{
         return pin;
     }
 
+    /**
+     * A este método se le llama desde el constructor. Lo que devuelve es el atributo pin.
+     * Se crea un pin aleatorio de 6 números. Uso String para que concatenarlo sea más fácil y que los ceros puedan ser parte del pin.
+     * Imprime el chivato del pin para poder hacer las pruebas.
+     * @return pin de 6 dígitos pasado a int.
+     */
     public int setPin() {
 
         String pinString = "";

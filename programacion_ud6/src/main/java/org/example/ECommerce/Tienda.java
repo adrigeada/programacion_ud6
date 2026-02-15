@@ -6,9 +6,9 @@ public class Tienda {
     private static Scanner teclado = new Scanner(System.in);
 
     /**
-     *
-     * @param pago
-     * @return
+     * Recibe por teclado el importe a pagar.
+     * @param pago, dependiendo de qué método de pago reciba este método, se ejecutará el correspondiente método abstracto procesarPago. Cada hija de MetodoPago tiene un procesarPago diferente.
+     * @return solo se usa para Paypal. En este caso se devuelve el importe para que se compare con el saldo de la cuenta de Paypal. En los casos de Bizum y TarjetaCredito no se utiliza el return.
      */
     public static double realizarPago(MetodoPago pago){
         System.out.println("¿Cual es el importe a pagar?");
@@ -20,7 +20,10 @@ public class Tienda {
     }
 
     /**
-     *
+     *Se inserta por teclado el método de pago que queremos utilizar y se pasa a minúsculas. Dependiendo de cual hemos elegido cada caso del switch hará una cosa diferente.
+     * - Bizum: recibe por teclado el telefono que se usa en el constructor. Si validarBizum es true se ejecuta realizarPago, si no se acaba el programa.
+     * - Paypal: recibe por teclado la cuenta que se usa en el constructor. Si validarPaypal es true se le pasa realizarPago a validarSaldo para que se comparen el importe introducido en realizarPago con el saldo de paypal. Si es false, se acaba el programa.
+     * - Tarjeta: Se piden el numero y el tipo de tarjeta, se usan en el constructor. Si validarTarjeta es true se ejecuta realizarPago, si no se acaba el programa.
      */
     public static void iniciarPago(){
         System.out.println("¿Qué método de pago vas a usar?[Bizum, Paypal, Tarjeta]");
@@ -51,6 +54,7 @@ public class Tienda {
                 Paypal paypal = new Paypal(email);
 
                 if (paypal.validarPayPal()){
+
                     paypal.validarSaldo(realizarPago(paypal));
 
                 }else {
