@@ -35,7 +35,7 @@ public class Paypal extends MetodoPago{
             System.out.println("Saldo suficiente. Procesando pago de "+importe+"€. Nuevo saldo: "+(saldo-importe)+"€.");
             return true;
         }else {
-            System.out.println("Saldo insuficiente para pagar "+importe+"€. Tu saldo actual es: "+saldo);
+            System.out.println("Saldo insuficiente para pagar "+importe+"€. Tu saldo actual es: "+saldo+"€.");
             return false;
         }
     }

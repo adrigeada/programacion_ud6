@@ -55,7 +55,11 @@ public class Tienda {
 
                 if (paypal.validarPayPal()){
 
-                    paypal.validarSaldo(realizarPago(paypal));
+                    if(paypal.validarSaldo(realizarPago(paypal))){
+                        System.out.println("Gracias por su compra");
+                    }else {
+                        System.out.println("Saliendo del programa");
+                    }
 
                 }else {
                     System.out.println("Saliendo del programa...");
