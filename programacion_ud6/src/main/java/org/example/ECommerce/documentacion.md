@@ -1,14 +1,14 @@
 # Práctica 1. Sistema de pago para un e-commerce
 
 ## Índice
-1. [Intro](https://github.com/adrigeada/programacion_ud6/new/main/programacion_ud6/src/main/java/org/example/ECommerce#1-intro)
-2. [Estructura de clases](https://github.com/adrigeada/programacion_ud6/edit/main/programacion_ud6/src/main/java/org/example/ECommerce/documentacion.md#2-estructura-de-clases)
-    - [Diagrama de clases UML](https://github.com/adrigeada/programacion_ud6/edit/main/programacion_ud6/src/main/java/org/example/ECommerce/documentacion.md#diagrama-de-clases-uml)
-    - [Código de PlantUML](https://github.com/adrigeada/programacion_ud6/edit/main/programacion_ud6/src/main/java/org/example/ECommerce/documentacion.md#c%C3%B3digo-de-plantuml)
-    - [Contenido de las clases .java](https://github.com/adrigeada/programacion_ud6/edit/main/programacion_ud6/src/main/java/org/example/ECommerce/documentacion.md#contenido-de-las-clases-java)
-3. [Programa principal (app)](https://github.com/adrigeada/programacion_ud6/edit/main/programacion_ud6/src/main/java/org/example/ECommerce/documentacion.md#3-programa-principal-app)
-4. [Pruebas](https://github.com/adrigeada/programacion_ud6/edit/main/programacion_ud6/src/main/java/org/example/ECommerce/documentacion.md#4-pruebas)
-5. [Entrega](https://github.com/adrigeada/programacion_ud6/edit/main/programacion_ud6/src/main/java/org/example/ECommerce/documentacion.md#5-entrega)
+1. [Intro](#1-intro)
+2. [Estructura de clases](#2-estructura-de-clases)
+    - [Diagrama de clases UML](#diagrama-de-clases-uml)
+    - [Código de PlantUML](#c%C3%B3digo-de-plantuml)
+    - [Contenido de las clases .java](#contenido-de-las-clases-java)
+3. [Programa principal (app)](#3-programa-principal-app)
+4. [Pruebas](#4-pruebas)
+6. [Entrega](#5-entrega)
 
 ### 1. Intro
   > En esta práctica creamos una app para un sistema de pagos online. Al entrar en la tienda se nos pregunta que método de pago queremos usar entre 3 opciones. Bizum, Paypal y Tarjeta de crédito. Dependiendo de lo que elijamos pasaremos a validar el método de pago.
