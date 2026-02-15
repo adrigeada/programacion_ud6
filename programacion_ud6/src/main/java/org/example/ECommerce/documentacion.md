@@ -22,7 +22,6 @@
 #### Diagrama de clases UML
 ![](img/diagrama.png)
 
-
 #### Código de PlantUML
 
 ````
