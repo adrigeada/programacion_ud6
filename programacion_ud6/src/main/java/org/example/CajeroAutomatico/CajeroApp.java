@@ -23,7 +23,7 @@ public class CajeroApp {
 
     public static void opcion(String opcion){
 
-
+        
         switch (opcion){
             case "1":
                 caixa.consultar();
