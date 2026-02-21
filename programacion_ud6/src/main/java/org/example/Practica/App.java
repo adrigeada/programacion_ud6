@@ -20,34 +20,34 @@ public class App {
         Jugador juan = new Jugador("Juan",20,Equipos.SENIOR,Posiciones.DELANTERO,listaJugadores);
         listaJugadores.add(juan);
 
-        Entrenador lucas = new Entrenador("Lucas",50,Equipos.SENIOR);
-        lista_muxta.add(lucas);
-        Entrenador carlos = new Entrenador("Carlos",40,Equipos.ALEVIN);
-        lista_muxta.add(carlos);
-
-        Masajista marcos = new Masajista("Marcos",31,"Fisioterapia",5);
-        lista_muxta.add(marcos);
-
-        Acompanyante pepi = new Acompanyante("Pepi",20,pepe,"Hermana");
-        lista_muxta.add(pepi);
+//        Entrenador lucas = new Entrenador("Lucas",50,Equipos.SENIOR);
+//        lista_muxta.add(lucas);
+//        Entrenador carlos = new Entrenador("Carlos",40,Equipos.ALEVIN);
+//        lista_muxta.add(carlos);
+//
+//        Masajista marcos = new Masajista("Marcos",31,"Fisioterapia",5);
+//        lista_muxta.add(marcos);
+//
+//        Acompanyante pepi = new Acompanyante("Pepi",20,pepe,"Hermana");
+//        lista_muxta.add(pepi);
 
         //crear acompañante desde menú
 
-        adri.concentrarse();
-        lucas.entrenar();
-        marcos.darMasaje(adri);
-        pepi.viajar("Valencia");
-        carlos.planificarEntrenamiento();
-        lucas.entrenar();
-        pepe.descansar();
-        pepe.calentar();
-        juan.jugarPartido("Betis");
-        pepi.animarEquipo();
-        lucas.hacerCambios();
-        adri.marcarGol();
-        marcos.celebrarGol();
-        lucas.viajar("Mutxamel");
-        adri.descansar();
+//        adri.concentrarse();
+//        lucas.entrenar();
+//        marcos.darMasaje(adri);
+//        pepi.viajar("Valencia");
+//        carlos.planificarEntrenamiento();
+//        lucas.entrenar();
+//        pepe.descansar();
+//        pepe.calentar();
+//        juan.jugarPartido("Betis");
+//        pepi.animarEquipo();
+//        lucas.hacerCambios();
+//        adri.marcarGol();
+//        marcos.celebrarGol();
+//        lucas.viajar("Mutxamel");
+//        adri.descansar();
 
 
         imprimirMenu();
@@ -55,6 +55,11 @@ public class App {
 
 
 
+    }
+
+    public static void minimain(){
+        imprimirMenu();
+        elegirmenu();
     }
 
     public static void imprimirMenu(){
@@ -117,7 +122,7 @@ public class App {
                 menuJugadores();
                 break;
             default:
-                main();
+                minimain();
         }
 
     }
@@ -164,6 +169,7 @@ public class App {
     }
 
     public static void elegirJugador (ArrayList<Jugador> listaMutxa){
+        boolean control = false;
         System.out.println("\nQue jugador quieres modificar?");
 
         for (Jugador jugador : listaMutxa){
@@ -177,15 +183,20 @@ public class App {
                 System.out.println("\nModificando al "+jugador);
                 System.out.println("====================================");
                 jugador.modificarJugador(jugador,listaMutxa);
-            }else {
-                System.out.println("No hay un jugador con ese nombre");
+                control = true;
             }
+
+        }
+
+        if (!control){
+            System.out.println("No hay jugadores con nombre "+modificar);
         }
 
 
     }
 
     public static void anyadirAcompanyante(){
+        boolean control = false;
         System.out.println("Qué jugador quiere añadir un acompañante?");
         for (Jugador jugador : listaJugadores){
             System.out.println("- "+jugador.getNombre());
@@ -195,11 +206,13 @@ public class App {
         for (Jugador jugador : listaJugadores){
             if (nombre_jugador.equalsIgnoreCase(jugador.getNombre()) && jugador.getCategoria().equals(Equipos.SENIOR)){
                 crearAcompanyante(jugador);
-                break;
-            }else {
-                System.out.println("No hay jugadores con nombre: "+nombre_jugador+" en el equipo SENIOR");
+               control= true;
             }
         }
+        if (!control){
+            System.out.println("No hay jugadores con nombre: "+nombre_jugador+" en el equipo SENIOR");
+        }
+
     }
 
     public static void crearAcompanyante(Jugador jugador){
@@ -220,6 +233,7 @@ public class App {
 
 
     public static void elegirEntrenador(){
+        boolean control = false;
         System.out.println("Que entrenador quieres modificar?");
         for (MutxamelFC personal : lista_muxta){
             if (personal instanceof Entrenador){
@@ -232,12 +246,14 @@ public class App {
 
                 if (nombre.equalsIgnoreCase(personal.getNombre())){
                     ((Entrenador) personal).modificarEntrenador((Entrenador) personal,lista_muxta);
-                }else {
-                    System.out.println("No hay ningun entrenador con ese nombre");
+                    control = true;
                 }
 
-
             }
+        }
+        if (!control){
+            System.out.println("No hay ningun entrenador con nombre: "+nombre);
+            minimain();
         }
 
 
@@ -264,7 +280,7 @@ public class App {
             }
         }while (control);
 
-        main();
+        minimain();
 
     }
 
