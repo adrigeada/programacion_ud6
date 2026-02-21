@@ -50,7 +50,6 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas {
 
                 try {
                     for (Jugador jugador : listaMutxa){
-
                         if (jugador.dorsal == dorsal && jugador.getCategoria()== categoria){
                             throw new DorsalExistenteException();
                         }else {
@@ -66,6 +65,49 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas {
             }
 
         }while (control);
+
+    }
+
+
+    public void modificarJugador(Jugador jugador,ArrayList<Jugador> listaMutxa){
+
+        System.out.println("\nQue quieres modificar? [nombre,edad,categoria,dorsal,posicion]");
+        String modificar = teclado.nextLine();
+
+        switch (modificar){
+            case "nombre":
+                System.out.println("Nuevo nombre:");
+                jugador.setNombre(teclado.nextLine());
+                break;
+            case "edad":
+                System.out.println("Nueva edad:");
+                jugador.setEdad(teclado.nextInt());
+                teclado.nextLine();
+                break;
+            case "categoria":
+                System.out.println("Nueva categoría: [BENJAMIN,ALEVIN,INFANTIL,CADETE,JUVENIL,SENIOR]");
+                try{
+                    jugador.setCategoria(Equipos.valueOf(teclado.next().toUpperCase()));
+                }catch (IllegalArgumentException e){
+                    System.out.println("No es una categoría válida");
+                }
+                teclado.nextLine();
+                break;
+            case "dorsal":
+                jugador.setDorsal(listaMutxa);
+
+                break;
+            case "posicion":
+                System.out.println("Nueva posicion: [PORTERO,DEFENSA,CENTROCAMPISTA,DELANTERO]");
+                try{
+                    jugador.setPosicion(Posiciones.valueOf(teclado.next().toUpperCase()));
+                }catch (IllegalArgumentException e){
+                    System.out.println("No es una posicion válida.");
+                }
+                break;
+            default:
+                System.out.println("No es posible modificar "+modificar);
+        }
 
     }
 
@@ -91,11 +133,11 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas {
 
     @Override
     public String toString() {
-        return "Jugador{" + super.toString()+
-                "categoria=" + categoria +
+        return "Jugador=[" + super.toString()+
+                "Categoria=" + categoria +
                 ", dorsal=" + dorsal +
                 ", posicion=" + posicion +
-                "} ";
+                "] ";
     }
 
     @Override

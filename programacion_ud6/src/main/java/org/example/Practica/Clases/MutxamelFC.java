@@ -30,9 +30,8 @@ public abstract class MutxamelFC implements FuncionesIntegrantes {
 
     @Override
     public String toString() {
-        return "MutxamelFC{" +
-                "nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                '}';
+        return "Nombre=" + nombre +
+                ", Edad=" + edad +
+                ", ";
     }
 }
