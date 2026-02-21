@@ -52,11 +52,10 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas {
                     for (Jugador jugador : listaMutxa){
                         if (jugador.dorsal == dorsal && jugador.getCategoria()== categoria){
                             throw new DorsalExistenteException();
-                        }else {
-                            this.dorsal = dorsal;
                         }
-
                     }
+                    this.dorsal = dorsal;
+
                 }catch (DorsalExistenteException e){
                     System.out.println("Otro jugador ya tiene ese dorsal");
                     control = true;
