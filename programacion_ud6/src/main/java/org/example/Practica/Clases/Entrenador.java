@@ -33,6 +33,9 @@ public class Entrenador extends MutxamelFC implements AccionesDeportivas {
         return formacionPreferida;
     }
 
+    /**
+     * Se pide la formacion preferida por teclado, y se comprueba que tenga el formato necesario usando matches. Si no lo tiene se activa una excepción personalizada que capturamos con el try catch. Si el formato está bien, se asigna la formacion al Entrenador creado.
+     */
     public void setFormacionPreferida() {
         boolean control = false;
 
@@ -58,7 +61,11 @@ public class Entrenador extends MutxamelFC implements AccionesDeportivas {
 
     }
 
-    public void modificarEntrenador(Entrenador entrenador, ArrayList<MutxamelFC> listaMutxa){
+    /**
+     * Insertas por teclado lo que quieres modificar del entrenador seleccionado. Segun el atributo que elijas, hace un set para ese atributo.
+     * @param entrenador seleccionado en el método elegirEntrenador()
+     */
+    public void modificarEntrenador(Entrenador entrenador){
         System.out.println("\nModificando "+entrenador);
         System.out.println("\nQue quieres modificar [nombre,edad,equipo,formacion]");
         String modificar = teclado.nextLine().toLowerCase();

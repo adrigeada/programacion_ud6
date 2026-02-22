@@ -35,6 +35,10 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas {
         return dorsal;
     }
 
+    /**
+     * Se pide el dorsal por teclado. Se recorre la lista de jugadores comprobando que nadie del mismo equipo (categoría) tenga ya asignado ese dorsal. Si una de esas condiciones se cumple, se lanza una excepción personalizada que capturamos con el try catch. Si no se cumplen, el dorsal se asigna al Jugador creado.
+     * @param listaMutxa lista de jugadores creada en el main.
+     */
     public void setDorsal(ArrayList<Jugador> listaMutxa) {
         boolean control = false;
 
@@ -67,7 +71,11 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas {
 
     }
 
-
+    /**
+     * Se inserta por teclado el atributo que quieres modificar del jugador pasado como parámetro. Según lo insertado se hace el set necesario
+     * @param jugador jugador modificado
+     * @param listaMutxa lista de jugadores para pasar a setDorsal()
+     */
     public void modificarJugador(Jugador jugador,ArrayList<Jugador> listaMutxa){
 
         System.out.println("\nQue quieres modificar? [nombre,edad,categoria,dorsal,posicion]");

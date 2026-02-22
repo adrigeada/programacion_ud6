@@ -57,11 +57,17 @@ public class App {
 
     }
 
+    /**
+     * Lo uso para repetir los menus sin tener que volver al main y crear los objetos otra vez
+     */
     public static void minimain(){
         imprimirMenu();
         elegirmenu();
     }
 
+    /**
+     * Imprime el menú principal
+     */
     public static void imprimirMenu(){
         System.out.println("=== App de mantenimiento del MUTXAMEL FC ===");
         System.out.println("\n    [1]. Mantenimiento de jugadores");
@@ -73,6 +79,9 @@ public class App {
         System.out.println("Selecciona una opción");
     }
 
+    /**
+     * El switch case del menú principal.
+     */
     public static void elegirmenu(){
         String opcion = teclado.nextLine();
 
@@ -94,6 +103,9 @@ public class App {
         }
     }
 
+    /**
+     * Imprime el menú de los jugadores
+     */
     public static void menuJugadores(){
         System.out.println("=== Mantenimiento de Jugadores ===");
         System.out.println("\n    [1]. Añadir nuevo jugador");
@@ -105,6 +117,9 @@ public class App {
         opcionJugadores();
     }
 
+    /**
+     * Switch case para el menú de jugadores
+     */
     public static void opcionJugadores(){
         String opcion = teclado.nextLine();
 
@@ -127,6 +142,9 @@ public class App {
 
     }
 
+    /**
+     * Pide por teclado los atributos del jugador a añadir y los guarda en variables. Luego crea al Jugador y lo añade a la lista de Jugadores
+     */
     public static void anyadirJugador(){
         Equipos equipo = null;
         Posiciones posicion = null;
@@ -168,6 +186,10 @@ public class App {
 
     }
 
+    /**
+     * Te enseña los Jugadores que hay en la lista de Jugadores. Luego eliges por nombre al jugador que quieres modificar. Si hay un jugador con ese nombre se llama al método modificarJugador() con ese Jugador con el que coincide el nombre
+     * @param listaMutxa lista de Jugadores
+     */
     public static void elegirJugador (ArrayList<Jugador> listaMutxa){
         boolean control = false;
         System.out.println("\nQue jugador quieres modificar?");
@@ -195,6 +217,9 @@ public class App {
 
     }
 
+    /**
+     * Se selecciona al jugador con su nombre, que quiere añadir un acompañante. Si hay un jugador con ese nombre y pertenece al equipo SENIOR, se llama al método crearAcompañante() usando a ese Jugador como parámetro
+     */
     public static void anyadirAcompanyante(){
         boolean control = false;
         System.out.println("Qué jugador quiere añadir un acompañante?");
@@ -215,6 +240,10 @@ public class App {
 
     }
 
+    /**
+     * Se piden los atributos del nuevo acompañante por teclado y se usan para crearlo.
+     * @param jugador SENIOR al que acompaña el nuevo acompañante
+     */
     public static void crearAcompanyante(Jugador jugador){
         System.out.println("Nombre del acompañante:");
         String nombre = teclado.nextLine();
@@ -232,6 +261,9 @@ public class App {
     }
 
 
+    /**
+     * Se muestra la lista de personal. De esa lista se enseñan solo los que sean Entrenadores. Se ingresa por teclado el nombre del entrenador que se quiere modificar. Si hay un entrenador con ese nombre se llama al método modificarEntrenador().
+     */
     public static void elegirEntrenador(){
         boolean control = false;
         System.out.println("Que entrenador quieres modificar?");
@@ -245,7 +277,7 @@ public class App {
             if (personal instanceof Entrenador){
 
                 if (nombre.equalsIgnoreCase(personal.getNombre())){
-                    ((Entrenador) personal).modificarEntrenador((Entrenador) personal,lista_muxta);
+                    ((Entrenador) personal).modificarEntrenador((Entrenador) personal);
                     control = true;
                 }
 
@@ -259,6 +291,9 @@ public class App {
 
     }
 
+    /**
+     * Enseña los equipos que hay en la clase enum EQUIPOS usando values. Luego se ingresa por teclado al equipo que se quiere animar. Se repite si ingresas un nombre que no coincide con los del enum.
+     */
     public static void consultarEquipos(){
         System.out.println("Estos son nuestros equipos:");
         for (Equipos equipo : Equipos.values()){
