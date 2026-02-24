@@ -7,8 +7,7 @@
     - [Código de PlantUML](#c%C3%B3digo-de-plantuml)
     - [Contenido de las clases .java](#contenido-de-las-clases-java)
 3. [Programa principal (app)](#3-programa-principal-app)
-4. [Pruebas](#4-pruebas)
-5. [Entrega](#5-entrega)
+4. [Entrega](#4-entrega)
 
 ### 1. Intro
 > En esta práctica creamos una app para la digitalización del club de fútbol de Mutxamel.
@@ -1049,11 +1048,8 @@ public class App {
 [Link a la clase en github](https://github.com/adrigeada/programacion_ud6/blob/main/programacion_ud6/src/main/java/org/example/Practica/App.java)
 <br>
 
-### 4. Pruebas
 
-<video src="video.mp4" width="640" height="360" controls></video>
-
-### 5. Entrega
+### 4. Entrega
 
 - [X] Código fuente en GitHub
 - [X] Documentación
