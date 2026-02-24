@@ -3,6 +3,7 @@ package org.example.Practica;
 import org.example.Practica.Clases.*;
 import org.example.Practica.Enums.Equipos;
 import org.example.Practica.Enums.Posiciones;
+import org.example.Practica.Interfaces.AccionesDeportivas;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,6 +11,7 @@ import java.util.Scanner;
 public class App {
     static ArrayList<Jugador> listaJugadores = new ArrayList<>();
     static ArrayList<MutxamelFC> lista_muxta = new ArrayList<>();
+    static ArrayList<Posiciones> listaPosiciones = new ArrayList<>();
     static Scanner teclado = new Scanner(System.in);
     static void main() {
 
@@ -19,6 +21,7 @@ public class App {
         listaJugadores.add(pepe);
         Jugador juan = new Jugador("Juan",20,Equipos.SENIOR,Posiciones.DELANTERO,listaJugadores);
         listaJugadores.add(juan);
+
 
 //        Entrenador lucas = new Entrenador("Lucas",50,Equipos.SENIOR);
 //        lista_muxta.add(lucas);
@@ -52,7 +55,6 @@ public class App {
 
         imprimirMenu();
         elegirmenu();
-
 
 
     }
