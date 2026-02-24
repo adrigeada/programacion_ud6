@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"org.example.Practica"},{"l":"org.example.Practica.Clases"},{"l":"org.example.Practica.Enums"},{"l":"org.example.Practica.Excepciones"},{"l":"org.example.Practica.Interfaces"}];updateSearchResults();
