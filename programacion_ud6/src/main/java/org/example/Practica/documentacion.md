@@ -15,6 +15,7 @@
 > También tenemos dos interfaces. FuncionesIntegrantes que implementa FCMutxamel y por ende, todos su hijos. Y AccionesDeportivas que implementa Jugador y Entrenador
 > Tenemos dos clases Enum. Equipos guarda las distintas categorías de equipos y Posiciones guarda las diferentes posiciones en las que pueden jugar los jugadores.
 > Por último hemos creado dos excepciones. DorsalExistenteExcepcion, que se activa cuando hay más de un jugador en el mismo equipo con el mismo número. Y FormatoFormacionExcepcion, que salta cuando la formación preferida de un entrenador no coincide con el formato permitido (N-N-N)
+> En la programa principal (App) creamos un menú que permitirá elegir hacer mantenimiento de Jugadores, Entrenadores, Masajistas y enseñar los equipos presentes en el FCMutxamel. Para los jugadores se pueden añadir nuevos jugadores, modificarlos y crear acompañantes para los jugadores. Los entrenadores se podrán modificar. Los masajistas no se pueden controlar. 
 
 <br>
 
@@ -1046,3 +1047,15 @@ public class App {
 ````
 [Link a la clase en github](https://github.com/adrigeada/programacion_ud6/blob/main/programacion_ud6/src/main/java/org/example/Practica/App.java)
 <br>
+
+### 4. Pruebas
+
+<video src="video.mp4" width="640" height="360" controls></video>
+
+### 5. Entrega
+
+- [X] Código fuente en GitHub
+- [X] Documentación
+- [X] JavaDocs
+- [X] Vídeo
+
