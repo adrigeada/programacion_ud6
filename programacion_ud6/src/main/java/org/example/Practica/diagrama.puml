@@ -97,7 +97,7 @@ AccionesDeportivas <|.. Entrenador
 Jugador --> Equipos
 Jugador --> Posiciones
 Entrenador --> Equipos
-Acompanyante --> Jugador
+Acompanyante "1" o-- "1" Jugador
 Masajista --> Jugador
 
 Jugador ..> DorsalExistenteException
