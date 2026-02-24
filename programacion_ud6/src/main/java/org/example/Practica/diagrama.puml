@@ -1,0 +1,108 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package org.example.Practica.Interfaces {
+
+    interface FuncionesIntegrantes {
+        +concentrarse()
+        +viajar(ciudad:String)
+        +celebrarGol()
+    }
+
+    interface AccionesDeportivas {
+        +entrenar()
+        +jugarPartido(rival:String)
+    }
+}
+
+package org.example.Practica.Enums {
+    enum Equipos {
+        BENJAMIN
+        ALEVIN
+        INFANTIL
+        CADETE
+        JUVENIL
+        SENIOR
+    }
+
+    enum Posiciones {
+        PORTERO
+        DEFENSA
+        CENTROCAMPISTA
+        DELANTERO
+    }
+}
+
+package org.example.Practica.Excepciones {
+    class DorsalExistenteException
+    class FormatoFormacionException
+}
+
+package org.example.Practica.Clases {
+
+    abstract class MutxamelFC {
+        -nombre:String
+        -edad:int
+    }
+
+    class Jugador {
+        -categoria:Equipos
+        -dorsal:int
+        -posicion:Posiciones
+        +calentar()
+        +descansar()
+        +marcarGol()
+    }
+
+    class Entrenador {
+        -equipo:Equipos
+        -formacionPreferida:String
+        +planificarEntrenamiento()
+        +hacerCambios()
+    }
+
+    class Masajista {
+        -titulacion:String
+        -anosExperiencia:int
+        +darMasaje(jugador:Jugador)
+    }
+
+    class Acompanyante {
+        -integrante:Jugador
+        -parentesco:String
+        +animarEquipo()
+    }
+}
+
+
+
+' =======================
+' HERENCIA
+' =======================
+MutxamelFC <|-- Jugador
+MutxamelFC <|-- Entrenador
+MutxamelFC <|-- Masajista
+MutxamelFC <|-- Acompanyante
+
+' =======================
+' IMPLEMENTACION INTERFACES
+' =======================
+FuncionesIntegrantes <|.. MutxamelFC
+AccionesDeportivas <|.. Jugador
+AccionesDeportivas <|.. Entrenador
+
+' =======================
+' RELACIONES
+' =======================
+Jugador --> Equipos
+Jugador --> Posiciones
+Entrenador --> Equipos
+Acompanyante --> Jugador
+Masajista --> Jugador
+
+Jugador ..> DorsalExistenteException
+Entrenador ..> FormatoFormacionException
+
+
+
+@enduml

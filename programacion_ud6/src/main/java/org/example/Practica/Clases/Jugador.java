@@ -127,7 +127,8 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas {
     }
 
     public void marcarGol(){
-        System.out.println("Chutando a puerta!!");
+        System.out.println("Chutando a puerta!!" +
+                "");
     }
 
     public Posiciones getPosicion() {
