@@ -7,7 +7,8 @@
     - [Código de PlantUML](#c%C3%B3digo-de-plantuml)
     - [Contenido de las clases .java](#contenido-de-las-clases-java)
 3. [Programa principal (app)](#3-programa-principal-app)
-4. [Entrega](#4-entrega)
+4. [Pruebas](#4-pruebas)
+5. [Entrega](#5-entrega)
 
 ### 1. Intro
 > En esta práctica creamos una app para la digitalización del club de fútbol de Mutxamel.
