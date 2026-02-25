@@ -7,6 +7,7 @@ public class AppPizzaExpress {
     static Scanner teclado = new Scanner(System.in);
     static  Empleado juan = new Empleado("Juan");
     static ArrayList<PizzaExpress> listaEntera = new ArrayList<>();
+
     static void main() {
 
         Empleado alberto = new Empleado("Alberto");
@@ -27,7 +28,6 @@ public class AppPizzaExpress {
         String nombre = teclado.nextLine();
 
         Cliente cliente = new Cliente(nombre);
-
         Pedido pedido = new Pedido(cliente);
 
         System.out.println(pedido.getEstadoPedido());
@@ -80,8 +80,6 @@ public class AppPizzaExpress {
                 }else {
                     total += 0;
                 }
-
-
 
 
             System.out.println("El precio actual de la cuenta es de "+total+"€. Quieres añadir otra pizza [S/N]");

@@ -43,7 +43,7 @@ public class Empleado extends PizzaExpress implements AccionesPedido{
                 pedido.setEstadoPedido(Estado.LISTO);
                 break;
             default:
-
+                System.out.println("Pedido cancelado");
         }
 
     }
