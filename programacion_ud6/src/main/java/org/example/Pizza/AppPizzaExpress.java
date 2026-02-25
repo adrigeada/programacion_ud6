@@ -38,6 +38,20 @@ public class AppPizzaExpress {
 
         System.out.println("Pedido "+pedido.getEstadoPedido()+"Total pedido "+total);
 
+        try{
+            juan.entregarPedido(pedido);
+        }catch (PizzaNoListaException e){
+            System.out.println("La pizza no está lista aun");
+        }
+
+        juan.siguienteEstado(pedido);
+        System.out.println(pedido.getEstadoPedido());
+
+        pedido.setEstadoPedido(Estado.LISTO);
+        juan.entregarPedido(pedido);
+
+
+
 
     }
 
@@ -50,8 +64,6 @@ public class AppPizzaExpress {
         String repetir = "";
 
         do {
-
-            do {
                 control = false;
                 cliente.pedir();
 
@@ -61,11 +73,16 @@ public class AppPizzaExpress {
                     System.out.println("no vale");
                     control = true;
                 }
-            }while (control);
 
-            pedido.getListaPizzas().add(eleccion);
+                if(!control){
+                    pedido.getListaPizzas().add(eleccion);
+                    total += eleccion.getPrecio();
+                }else {
+                    total += 0;
+                }
 
-            total += eleccion.getPrecio();
+
+
 
             System.out.println("El precio actual de la cuenta es de "+total+"€. Quieres añadir otra pizza [S/N]");
             repetir = teclado.nextLine();
