@@ -10,14 +10,14 @@ public class AppStoreManager {
     static void main() {
 
     imprimirMenu();
-    
+
     }
 
     public static void imprimirMenu(){
         System.out.println("=== GESTOR DE VIDEOJUEGOS ===");
         System.out.println("\nElige una opcion:");
         System.out.println("[1]. Añadir videojuego");
-        System.out.println("[2]. Modificar videojuegos");
+        System.out.println("[2]. Comprar videojuego");
         System.out.println("[3]. Eliminar videojuegos");
         System.out.println("[4]. Consular videojuego por plataforma");
         System.out.println("[X]. Salir");
